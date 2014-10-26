@@ -12,9 +12,9 @@ makeCacheMatrix <- function(a = matrix()) {
                         i <<- NULL                        
                 }
                 else {
-                        print("input object is not a square marix")
+                        message("input object is not a square marix")
                         a<<-NULL
-                        i<<NULL
+                        i<<-NULL
                 }
         }
         get <- function() a
@@ -31,7 +31,7 @@ makeCacheMatrix <- function(a = matrix()) {
 cacheSolve <- function(a, ...) {
         i <- a$getinverse()
         if(!is.null(i)) {
-                print("Message: getting cached data")
+                message("getting cached data")
                 return(i)
         }
         data <- a$get()
